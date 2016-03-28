@@ -5,12 +5,12 @@ creator: xc
 dependents: 
 description: Apply a tiddler template via the Editor toolbar
 list: readme
-modified: 20160328171621061
-modifier: xc
+modified: 20160328202028851
+modifier: at
 plugin-type: plugin
 title: $:/plugins/xcazin/apply-template
 type: application/json
-version: 0.9.12
+version: 0.8.8
 
 {
     "tiddlers": {
@@ -22,74 +22,62 @@ version: 0.9.12
             "condition": "[<targetTiddler>!has[type]] [<targetTiddler>type[text/vnd.tiddlywiki]]",
             "description": "{{$:/language/Buttons/ApplyTemplate/Hint}}",
             "icon": "$:/plugins/xcazin/apply-template/image",
-            "modified": "20160327192639453",
+            "modified": "20160328200116676",
             "modifier": "xc",
             "shortcuts": "((apply-template))",
-            "tags": "$:/tags/EditorToolbar dat",
+            "tags": "$:/tags/EditorToolbar",
             "title": "$:/core/ui/EditorToolbar/apply-template",
             "dropdown": "$:/core/ui/EditorToolbar/apply-template-dropdown"
         },
         "$:/config/shortcuts/apply-template": {
             "created": "20160326162251747",
             "creator": "xc",
-            "text": "ctl-shift-T",
-            "modified": "20160327193538756",
-            "modifier": "xc",
-            "tags": "dat",
+            "text": "ctrl-alt-T",
+            "modified": "20160328201810161",
+            "modifier": "at",
             "title": "$:/config/shortcuts/apply-template"
         },
         "$:/config/shortcuts-mac/apply-template": {
             "created": "20160326124248145",
             "creator": "xc",
-            "text": "shift-cmd-T",
-            "modified": "20160327193513108",
-            "modifier": "xc",
-            "tags": "dat",
+            "text": "alt-cmd-T",
+            "modified": "20160328201834533",
+            "modifier": "at",
             "title": "$:/config/shortcuts-mac/apply-template"
-        },
-        "Documentation for the apply-template editor button": {
-            "created": "20160326161640670",
-            "creator": "xc",
-            "text": "\\define mkfilter(plugname) [[$:/plugins/xcazin/display-as-tag]plugintiddlers[]]\n\\define pluglist() \n<$list filter=<<mkfilter>>>\n<dd><$link to=<<currentTiddler>>><$view field=\"title\"/></$link></dd>\n</$list>\n\\end\n\nYou can find version <$transclude tiddler=\"$:/plugins/xcazin/apply-template\" field=\"version\"/> of this plugin at [[$:/plugins/xcazin/apply-template]]. \n<<pluglist>>\n\nIt has been packaged with \n\n```js\n$tw.utils.repackPlugin(\"$:/plugins/xcazin/apply-template\",[\"$:/core/ui/EditorToolbar/apply-template\", \"$:/config/shortcuts/apply-template\",\"$:/config/shortcuts-mac/apply-template\",\"Documentation for the apply-template editor button\",\"$:/plugins/xcazin/apply-template/readme\", \"$:/plugins/xcazin/apply-template/image\",\"$:/language/Buttons/ApplyTemplate/Caption\",\"$:/language/Buttons/ApplyTemplate/Hint\",\"$:/core/ui/EditorToolbar/apply-template-dropdown\",\"$:/plugins/xcazin/apply-template/template-list\",\"$:/plugins/xcazin/apply-template/beaker.svg\",\"$:/custom/apply-template/template-list\",\"$:/custom/apply-template/DuckDuckGo search template\",\"$:/custom/apply-template/Google search template\"])\n```",
-            "modified": "20160328135914026",
-            "modifier": "xc",
-            "tags": "dat",
-            "title": "Documentation for the apply-template editor button"
         },
         "$:/plugins/xcazin/apply-template/readme": {
             "created": "20160326170055500",
             "creator": "xc",
-            "text": "This plugin adds an //apply-template// button {{$:/plugins/xcazin/apply-template/image}} to the Editor Toolbar. The button allows to apply the chosen template to the selection by simply transcluding the template with the selection as the //current tiddler// argument. \n\nUser may add a custom list of templates in the list field of $:/config/apply-template/template-list",
-            "modified": "20160327211520485",
+            "text": "Welcome to the //apply-template// plugin, version <$transclude tiddler=\"$:/plugins/xcazin/apply-template\" field=\"version\"/>.\n\nThis plugin adds an //apply-template// button {{$:/plugins/xcazin/apply-template/image}} to the new Editor Toolbar to be shipped with release 5.1.12. Clicking on the beaker-shaped button applies the chosen template to the selection, by transcluding the template with the //current tiddler// argument set to the text currently selected.\n\nThe template available by default, [[$:/core/ui/TagTemplate]], is the standard way to render the selection as a tag pill. As a user, you may customize the list of available templates by adding your own to the //list// field of [[$:/custom/apply-template/template-list]]. As an illustration as well as an encouragement to find better ideas, its current value is: \n\n><$view tiddler=\"$:/custom/apply-template/template-list\" field=\"list\"/>\n\nPlease give it a try by simply dragging [[this link|$:/plugins/xcazin/apply-template]] to your own wiki! Any suggestion to improve this plugin (including a better suited icon) is very welcome. You may want to use tiddlywiki@googlegroups.com or write directly at cazinx at gmail.com). Of course, don't hesitate to submit a pull request at https://github.com/xcazin/apply-template.",
+            "modified": "20160328195840757",
             "modifier": "xc",
-            "tags": "dat",
-            "title": "$:/plugins/xcazin/apply-template/readme"
+            "title": "$:/plugins/xcazin/apply-template/readme",
+            "type": "text/vnd.tiddlywiki",
+            "revision": "1",
+            "bag": "default"
         },
         "$:/plugins/xcazin/apply-template/image": {
             "created": "20160326172436164",
             "creator": "xc",
             "text": "{{$:/plugins/xcazin/apply-template/beaker.svg}}",
             "title": "$:/plugins/xcazin/apply-template/image",
-            "tags": "dat",
-            "modified": "20160328101931302",
+            "modified": "20160328200339641",
             "modifier": "xc"
         },
         "$:/language/Buttons/ApplyTemplate/Caption": {
             "created": "20160326162431301",
             "creator": "xc",
             "text": "apply template",
-            "modified": "20160327192025317",
+            "modified": "20160328200300195",
             "modifier": "xc",
-            "tags": "dat",
             "title": "$:/language/Buttons/ApplyTemplate/Caption"
         },
         "$:/language/Buttons/ApplyTemplate/Hint": {
             "created": "20160326162932786",
             "creator": "xc",
             "text": "Apply a tiddler template to selection",
-            "modified": "20160327192106557",
+            "modified": "20160328200319348",
             "modifier": "xc",
-            "tags": "dat",
             "title": "$:/language/Buttons/ApplyTemplate/Hint"
         },
         "$:/core/ui/EditorToolbar/apply-template-dropdown": {
@@ -106,8 +94,7 @@ version: 0.9.12
             "creator": "xc",
             "text": "",
             "title": "$:/plugins/xcazin/apply-template/template-list",
-            "tags": "dat",
-            "modified": "20160328134456472",
+            "modified": "20160328200128205",
             "modifier": "xc",
             "list": "$:/core/ui/TagTemplate",
             "user-list": "$:/custom/apply-template/template-list"
