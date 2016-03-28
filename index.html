@@ -127,8 +127,6 @@ Error message and password prompt
 
 <li>$:/plugins/xcazin/apply-template</li>
 
-<li>$:/plugins/xcazin/apply-template/readme</li>
-
 <li>$:/SiteSubtitle</li>
 
 <li>$:/SiteTitle</li>
@@ -7420,7 +7418,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div author="Xavier Cazin aka xcazin" core-version="&gt;=5.1.12" created="20160326173415622" creator="xc" dependents="" description="Apply a tiddler template via the Editor toolbar" list="readme" modified="20160328171621061" modifier="xc" plugin-type="plugin" title="$:/plugins/xcazin/apply-template" type="application/json" version="0.9.12" revision="0" bag="default">
+<div author="Xavier Cazin aka xcazin" core-version="&gt;=5.1.12" created="20160326173415622" creator="xc" dependents="" description="Apply a tiddler template via the Editor toolbar" list="readme" modified="20160328200458349" modifier="xc" plugin-type="plugin" title="$:/plugins/xcazin/apply-template" type="application/json" version="0.9.16" revision="0" bag="default">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/core/ui/EditorToolbar/apply-template&quot;: {
@@ -7431,74 +7429,62 @@ Error message and password prompt
             &quot;condition&quot;: &quot;[&lt;targetTiddler&gt;!has[type]] [&lt;targetTiddler&gt;type[text/vnd.tiddlywiki]]&quot;,
             &quot;description&quot;: &quot;{{$:/language/Buttons/ApplyTemplate/Hint}}&quot;,
             &quot;icon&quot;: &quot;$:/plugins/xcazin/apply-template/image&quot;,
-            &quot;modified&quot;: &quot;20160327192639453&quot;,
+            &quot;modified&quot;: &quot;20160328200116676&quot;,
             &quot;modifier&quot;: &quot;xc&quot;,
             &quot;shortcuts&quot;: &quot;((apply-template))&quot;,
-            &quot;tags&quot;: &quot;$:/tags/EditorToolbar dat&quot;,
+            &quot;tags&quot;: &quot;$:/tags/EditorToolbar&quot;,
             &quot;title&quot;: &quot;$:/core/ui/EditorToolbar/apply-template&quot;,
             &quot;dropdown&quot;: &quot;$:/core/ui/EditorToolbar/apply-template-dropdown&quot;
         },
         &quot;$:/config/shortcuts/apply-template&quot;: {
             &quot;created&quot;: &quot;20160326162251747&quot;,
             &quot;creator&quot;: &quot;xc&quot;,
-            &quot;text&quot;: &quot;ctl-shift-T&quot;,
-            &quot;modified&quot;: &quot;20160327193538756&quot;,
+            &quot;text&quot;: &quot;ctl-T&quot;,
+            &quot;modified&quot;: &quot;20160328200158605&quot;,
             &quot;modifier&quot;: &quot;xc&quot;,
-            &quot;tags&quot;: &quot;dat&quot;,
             &quot;title&quot;: &quot;$:/config/shortcuts/apply-template&quot;
         },
         &quot;$:/config/shortcuts-mac/apply-template&quot;: {
             &quot;created&quot;: &quot;20160326124248145&quot;,
             &quot;creator&quot;: &quot;xc&quot;,
-            &quot;text&quot;: &quot;shift-cmd-T&quot;,
-            &quot;modified&quot;: &quot;20160327193513108&quot;,
+            &quot;text&quot;: &quot;ctl-T&quot;,
+            &quot;modified&quot;: &quot;20160328200219459&quot;,
             &quot;modifier&quot;: &quot;xc&quot;,
-            &quot;tags&quot;: &quot;dat&quot;,
             &quot;title&quot;: &quot;$:/config/shortcuts-mac/apply-template&quot;
-        },
-        &quot;Documentation for the apply-template editor button&quot;: {
-            &quot;created&quot;: &quot;20160326161640670&quot;,
-            &quot;creator&quot;: &quot;xc&quot;,
-            &quot;text&quot;: &quot;\\define mkfilter(plugname) [[$:/plugins/xcazin/display-as-tag]plugintiddlers[]]\n\\define pluglist() \n&lt;$list filter=&lt;&lt;mkfilter&gt;&gt;&gt;\n&lt;dd&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;&lt;$view field=\&quot;title\&quot;/&gt;&lt;/$link&gt;&lt;/dd&gt;\n&lt;/$list&gt;\n\\end\n\nYou can find version &lt;$transclude tiddler=\&quot;$:/plugins/xcazin/apply-template\&quot; field=\&quot;version\&quot;/&gt; of this plugin at [[$:/plugins/xcazin/apply-template]]. \n&lt;&lt;pluglist&gt;&gt;\n\nIt has been packaged with \n\n```js\n$tw.utils.repackPlugin(\&quot;$:/plugins/xcazin/apply-template\&quot;,[\&quot;$:/core/ui/EditorToolbar/apply-template\&quot;, \&quot;$:/config/shortcuts/apply-template\&quot;,\&quot;$:/config/shortcuts-mac/apply-template\&quot;,\&quot;Documentation for the apply-template editor button\&quot;,\&quot;$:/plugins/xcazin/apply-template/readme\&quot;, \&quot;$:/plugins/xcazin/apply-template/image\&quot;,\&quot;$:/language/Buttons/ApplyTemplate/Caption\&quot;,\&quot;$:/language/Buttons/ApplyTemplate/Hint\&quot;,\&quot;$:/core/ui/EditorToolbar/apply-template-dropdown\&quot;,\&quot;$:/plugins/xcazin/apply-template/template-list\&quot;,\&quot;$:/plugins/xcazin/apply-template/beaker.svg\&quot;,\&quot;$:/custom/apply-template/template-list\&quot;,\&quot;$:/custom/apply-template/DuckDuckGo search template\&quot;,\&quot;$:/custom/apply-template/Google search template\&quot;])\n```&quot;,
-            &quot;modified&quot;: &quot;20160328135914026&quot;,
-            &quot;modifier&quot;: &quot;xc&quot;,
-            &quot;tags&quot;: &quot;dat&quot;,
-            &quot;title&quot;: &quot;Documentation for the apply-template editor button&quot;
         },
         &quot;$:/plugins/xcazin/apply-template/readme&quot;: {
             &quot;created&quot;: &quot;20160326170055500&quot;,
             &quot;creator&quot;: &quot;xc&quot;,
-            &quot;text&quot;: &quot;This plugin adds an //apply-template// button {{$:/plugins/xcazin/apply-template/image}} to the Editor Toolbar. The button allows to apply the chosen template to the selection by simply transcluding the template with the selection as the //current tiddler// argument. \n\nUser may add a custom list of templates in the list field of $:/config/apply-template/template-list&quot;,
-            &quot;modified&quot;: &quot;20160327211520485&quot;,
+            &quot;text&quot;: &quot;Welcome to the //apply-template// plugin, version &lt;$transclude tiddler=\&quot;$:/plugins/xcazin/apply-template\&quot; field=\&quot;version\&quot;/&gt;.\n\nThis plugin adds an //apply-template// button {{$:/plugins/xcazin/apply-template/image}} to the new Editor Toolbar to be shipped with release 5.1.12. Clicking on the beaker-shaped button applies the chosen template to the selection, by transcluding the template with the //current tiddler// argument set to the text currently selected.\n\nThe template available by default, [[$:/core/ui/TagTemplate]], is the standard way to render the selection as a tag pill. As a user, you may customize the list of available templates by adding your own to the //list// field of [[$:/custom/apply-template/template-list]]. As an illustration as well as an encouragement to find better ideas, its current value is: \n\n&gt;&lt;$view tiddler=\&quot;$:/custom/apply-template/template-list\&quot; field=\&quot;list\&quot;/&gt;\n\nPlease give it a try by simply dragging [[this link|$:/plugins/xcazin/apply-template]] to your own wiki! Any suggestion to improve this plugin (including a better suited icon) is very welcome. You may want to use tiddlywiki@googlegroups.com or write directly at cazinx at gmail.com). Of course, don't hesitate to submit a pull request at https://github.com/xcazin/apply-template.&quot;,
+            &quot;modified&quot;: &quot;20160328195840757&quot;,
             &quot;modifier&quot;: &quot;xc&quot;,
-            &quot;tags&quot;: &quot;dat&quot;,
-            &quot;title&quot;: &quot;$:/plugins/xcazin/apply-template/readme&quot;
+            &quot;title&quot;: &quot;$:/plugins/xcazin/apply-template/readme&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;revision&quot;: &quot;1&quot;,
+            &quot;bag&quot;: &quot;default&quot;
         },
         &quot;$:/plugins/xcazin/apply-template/image&quot;: {
             &quot;created&quot;: &quot;20160326172436164&quot;,
             &quot;creator&quot;: &quot;xc&quot;,
             &quot;text&quot;: &quot;{{$:/plugins/xcazin/apply-template/beaker.svg}}&quot;,
             &quot;title&quot;: &quot;$:/plugins/xcazin/apply-template/image&quot;,
-            &quot;tags&quot;: &quot;dat&quot;,
-            &quot;modified&quot;: &quot;20160328101931302&quot;,
+            &quot;modified&quot;: &quot;20160328200339641&quot;,
             &quot;modifier&quot;: &quot;xc&quot;
         },
         &quot;$:/language/Buttons/ApplyTemplate/Caption&quot;: {
             &quot;created&quot;: &quot;20160326162431301&quot;,
             &quot;creator&quot;: &quot;xc&quot;,
             &quot;text&quot;: &quot;apply template&quot;,
-            &quot;modified&quot;: &quot;20160327192025317&quot;,
+            &quot;modified&quot;: &quot;20160328200300195&quot;,
             &quot;modifier&quot;: &quot;xc&quot;,
-            &quot;tags&quot;: &quot;dat&quot;,
             &quot;title&quot;: &quot;$:/language/Buttons/ApplyTemplate/Caption&quot;
         },
         &quot;$:/language/Buttons/ApplyTemplate/Hint&quot;: {
             &quot;created&quot;: &quot;20160326162932786&quot;,
             &quot;creator&quot;: &quot;xc&quot;,
             &quot;text&quot;: &quot;Apply a tiddler template to selection&quot;,
-            &quot;modified&quot;: &quot;20160327192106557&quot;,
+            &quot;modified&quot;: &quot;20160328200319348&quot;,
             &quot;modifier&quot;: &quot;xc&quot;,
-            &quot;tags&quot;: &quot;dat&quot;,
             &quot;title&quot;: &quot;$:/language/Buttons/ApplyTemplate/Hint&quot;
         },
         &quot;$:/core/ui/EditorToolbar/apply-template-dropdown&quot;: {
@@ -7515,8 +7501,7 @@ Error message and password prompt
             &quot;creator&quot;: &quot;xc&quot;,
             &quot;text&quot;: &quot;&quot;,
             &quot;title&quot;: &quot;$:/plugins/xcazin/apply-template/template-list&quot;,
-            &quot;tags&quot;: &quot;dat&quot;,
-            &quot;modified&quot;: &quot;20160328134456472&quot;,
+            &quot;modified&quot;: &quot;20160328200128205&quot;,
             &quot;modifier&quot;: &quot;xc&quot;,
             &quot;list&quot;: &quot;$:/core/ui/TagTemplate&quot;,
             &quot;user-list&quot;: &quot;$:/custom/apply-template/template-list&quot;
@@ -7563,11 +7548,6 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20160326170055500" creator="xc" modified="20160328172000728" modifier="at" tags="dat" title="$:/plugins/xcazin/apply-template/readme" type="text/vnd.tiddlywiki" revision="0" bag="default">
-<pre>This plugin adds an //apply-template// button {{$:/plugins/xcazin/apply-template/image}} to the Editor Toolbar. The button allows to apply the chosen template to the selection by simply transcluding the template with the selection as the //current tiddler// argument. 
-
-User may add a custom list of templates in the list field of $:/custom/apply-template/template-list</pre>
-</div>
 <div created="20160328171710447" creator="at" modified="20160328171837879" modifier="at" title="$:/SiteSubtitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>Editor Tool Bar button to apply templates</pre>
 </div>
@@ -7580,7 +7560,7 @@ User may add a custom list of templates in the list field of $:/custom/apply-tem
 <div title="$:/status/UserName" revision="1" bag="default">
 <pre>at</pre>
 </div>
-<div list="$:/plugins/xcazin/apply-template/readme" title="$:/StoryList" revision="1" bag="default">
+<div list="$:/plugins/xcazin/apply-template/readme" title="$:/StoryList" revision="3" bag="default">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json" revision="0" bag="default">
