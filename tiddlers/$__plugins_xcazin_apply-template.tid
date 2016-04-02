@@ -5,29 +5,30 @@ creator: xc
 dependents: 
 description: Apply a tiddler template via the Editor toolbar
 list: readme
-modified: 20160328202028851
+modified: 20160402101523962
 modifier: at
 plugin-type: plugin
 title: $:/plugins/xcazin/apply-template
 type: application/json
-version: 0.8.8
+version: 0.8.10
 
 {
     "tiddlers": {
         "$:/core/ui/EditorToolbar/apply-template": {
-            "created": "20160326123717349",
-            "creator": "xc",
+            "created": "20160402091945947",
+            "creator": "at",
+            "modified": "20160402091950533",
+            "modifier": "at",
             "text": "",
             "caption": "{{$:/language/Buttons/ApplyTemplate/Caption}}",
             "condition": "[<targetTiddler>!has[type]] [<targetTiddler>type[text/vnd.tiddlywiki]]",
             "description": "{{$:/language/Buttons/ApplyTemplate/Hint}}",
             "icon": "$:/plugins/xcazin/apply-template/image",
-            "modified": "20160328200116676",
-            "modifier": "xc",
             "shortcuts": "((apply-template))",
             "tags": "$:/tags/EditorToolbar",
             "title": "$:/core/ui/EditorToolbar/apply-template",
-            "dropdown": "$:/core/ui/EditorToolbar/apply-template-dropdown"
+            "dropdown": "$:/core/ui/EditorToolbar/apply-template-dropdown",
+            "list-before": "$:/core/ui/EditorToolbar/preview"
         },
         "$:/config/shortcuts/apply-template": {
             "created": "20160326162251747",
