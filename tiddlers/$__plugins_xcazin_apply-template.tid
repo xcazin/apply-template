@@ -5,12 +5,12 @@ creator: xc
 dependents: 
 description: Apply a tiddler template via the Editor toolbar
 list: readme
-modified: 20160402111856779
+modified: 20160403112431508
 modifier: at
 plugin-type: plugin
 title: $:/plugins/xcazin/apply-template
 type: application/json
-version: 0.9.2
+version: 0.9.4
 
 {
     "tiddlers": {
@@ -60,10 +60,10 @@ version: 0.9.2
         "$:/plugins/xcazin/apply-template/image": {
             "created": "20160326172436164",
             "creator": "xc",
-            "text": "{{$:/plugins/xcazin/apply-template/beaker.svg}}",
+            "text": "{{$:/plugins/xcazin/apply-template/beaker1.svg}}",
             "title": "$:/plugins/xcazin/apply-template/image",
-            "modified": "20160328200339641",
-            "modifier": "xc"
+            "modified": "20160403112224231",
+            "modifier": "at"
         },
         "$:/language/Buttons/ApplyTemplate/Caption": {
             "created": "20160326162431301",
@@ -84,11 +84,11 @@ version: 0.9.2
         "$:/core/ui/EditorToolbar/apply-template-dropdown": {
             "created": "20160327184515077",
             "creator": "xc",
-            "text": "\\define lingo-base() $:/language/Buttons/ApplyTemplate/\n\\define toolbar-button-stamp-inner()\n<$button tag=\"a\">\n<$action-sendmessage\n\t$message=\"tm-edit-text-operation\"\n\t$param=\"wrap-selection\"\n\tprefix=\"{{\"\n\tsuffix=\"||$(template)$}}\"\n/>\n\n<$action-deletetiddler\n\t$tiddler=<<dropdown-state>>\n/>\n\n<$view tiddler=<<template>> field=\"caption\" mode=\"inline\">\n  <$view tiddler=<<template>> field=\"title\" mode=\"inline\"/>\n</$view>\n\n</$button>\n\\end\n''<<lingo Hint>>''.\n\n<ul>\n<$list filter=\"[list[$:/plugins/xcazin/apply-template/template-list]] [list{$:/plugins/xcazin/apply-template/template-list!!user-list}]\" variable=\"template\">\n\n<li><<toolbar-button-stamp-inner>></li>\n</$list>\n</ul>\n",
+            "text": "\\define lingo-base() $:/language/Buttons/ApplyTemplate/\n\\define toolbar-button-apply-template-inner()\n<$button tag=\"a\">\n<$action-sendmessage\n\t$message=\"tm-edit-text-operation\"\n\t$param=\"wrap-selection\"\n\tprefix=\"{{\"\n\tsuffix=\"||$(template-title)$}}\"\n/>\n\n<$action-deletetiddler\n\t$tiddler=<<dropdown-state>>\n/>\n\n<$view tiddler=<<template-title>> field=\"caption\" mode=\"inline\">\n  <$view tiddler=<<template-title>> field=\"title\" mode=\"inline\"/>\n</$view>\n\n</$button>\n\\end\n''<<lingo Hint>>''.\n\n<ul>\n<$list filter=\"[list[$:/plugins/xcazin/apply-template/template-list]] [list{$:/plugins/xcazin/apply-template/template-list!!user-list}]\" variable=\"template-title\">\n<li><<toolbar-button-apply-template-inner>></li>\n</$list>\n</ul>\n",
             "title": "$:/core/ui/EditorToolbar/apply-template-dropdown",
             "tags": "",
-            "modified": "20160328135310805",
-            "modifier": "xc"
+            "modified": "20160403112142754",
+            "modifier": "at"
         },
         "$:/plugins/xcazin/apply-template/template-list": {
             "created": "20160326172436164",
@@ -123,15 +123,6 @@ version: 0.9.2
             "type": "text/vnd.tiddlywiki",
             "revision": "3",
             "bag": "default"
-        },
-        "$:/plugins/xcazin/apply-template/beaker.svg": {
-            "created": "20160328100834950",
-            "creator": "xc",
-            "title": "$:/plugins/xcazin/apply-template/beaker.svg",
-            "type": "text/vnd.tiddlywiki",
-            "text": "{{$:/plugins/xcazin/apply-template/beaker1.svg}}",
-            "modified": "20160402105718970",
-            "modifier": "at"
         },
         "$:/custom/apply-template/template-list": {
             "text": "",
